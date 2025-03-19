@@ -1,13 +1,241 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<title>Pre_Commissioning</title>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+</head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href= "https://code.jquery.com/ui/1.13.0/themes/dark-hive/jquery-ui.css"> 
+   
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+  
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/toastr.min.css">
+<link rel="stylesheet" href="css/question.css">
+<link rel="stylesheet" href="css/pageStyle.css">
+<link rel="stylesheet" href="css/dryer.css">
+<link rel="stylesheet" href="css/result.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js" integrity= "sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"> 
+ </script>
+<style>
+#coepLogo,#vlabLogo{
+
+ pointer-events: none;
+}
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('Font/digital-7.ttf');
+}
+
+</style>
+<body >
+<header>
+		<img class="COEPLogo" src='images/COEPlogo.png' id="coepLogo" disabled>
+		<img class="VlabLogo" src='images/vlablogo.jpg' id="vlabLogo" disabled>
+	    <span id="colgName">COEP TECHNOLOGICAL UNIVERSITY PUNE</span>	
+			
+	</header>
+	
+	<div  class="row container-fluid" id="buttonDiv" >	
+		<div  class="col-sm-12" > 
+ 			<h5 id="counter" class=" btn1 timerStyle" hidden >00:00:00</h5> 
+<!-- 		 <button type="button" id="tagDetails" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Tag Details </b></button> -->
+<!-- 	     <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Problem statement</b> </button> -->
+		    <button type="button" id="procedure" class="btn btn-danger btn1 button1" data-toggle="modal" data-target="#proStr" hidden><b>Procedure </b></button>
+		    <button type="button" class="btn btn-danger btn1 button1"  id="report" style="margin-top:10px;"  hidden>Download report </button> 
+	     </div>
+	     
+	   
+			  
+<!-- 			    The Modal  ProStr -->
+		  <div class="modal fade " id="proStr">
+		    <div class="modal-dialog modal-xl" >
+			      <div class="modal-content">
+<!-- 		        Modal Header -->
+			        <div class="modal-header">
+		          <h4 class="modal-title"><center></center></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+<!-- 		        Modal body -->
+			        <div class="modal-body" id="proStrBody">
+		
+			        </div>
+<!-- 			        Modal footer -->
+			        <div class="modal-footer">
+<!-- 		             <button type="button" class="btn btn-danger" data-dismiss="modal" >Ok</button> -->
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+<!-- 			  End Modal ProStr -->
+	     
+ 	</div>
+ 	<div class="row justify-content-center" style="margin-bottom:0px;">
+            <div class="col-md-10 instruction-box">
+            <h3 class="text-center" style="    color: cornflowerblue;font-weight: 900;font-family: emoji;" id="header2">COMMISSIONING</h3>
+              
+            </div>
+        </div>
+ 	  
+<!--     <div class="row titlePart" id="Header" ></div> -->
+   
+
+	<div class="container-fluid" style="margin-top:10px; " id="mainDiv" >
+	
+ 		<div class="row justify-content-center" style="margin-bottom:20px;">
+            <div class="col-md-8 instruction-box">
+<!--             <h4 class="text-center">FAULT FINDING</h4> -->
+                <span class="fw-bold" style="    font-family: emoji;
+    font-size: 18px;
+    word-spacing: 1px;">You are appointed as “commissioning Engineer” by your firm and assigned you a job of 
+    commissioning of a Boiler and Heat Exchanger Plant. List the documents you will collect 
+    for the starting of commissioning activity.
+             </span>
+            </div>
+        </div>
+       <div class="row justify-content-center">
+            
+            <div class="col-md-4" style="border-style: solid;padding:5px ;margin:5px;">
+                <div class="card p-3">
+<!--                     <h5 class="text-center">Pre_Commissioning</h5> -->
+                   <ol STYLE="    FONT-WEIGHT: BOLD;">
+    <li>Fully automatic plant with PLC control and SCADA interface</li>
+    <li>A steam of 30 Kg/Hr at 3.5 Kg/cm², and 135&deg;C</li>
+    <li>The steam will be used to produce hot water up to 80&deg;C, with 800 LPH flow</li>
+    <li>The condensate will be used as feed water to improve efficiency</li>
+    <li>Three level interlocks are used to protect the plant</li>
+    <li>The plant should generate the data so as to monitor vital health parameters of the plant</li>
+</ol>
+
+                    <button class="btn btn-success " id="btnStart" style="float:right;margin: 10px;background-color:teal;"  >START</button>
+               
+                </div>
+            </div>
+        
+        </div>
+
+	</div>
+	 <div class="modal fade " id="refMimicModal">
+		    <div class="modal-dialog modal-xl" >
+			      <div class="modal-content">
+<!-- 		        Modal Header -->
+			        <div class="modal-header">
+		          <h4 class="modal-title"><center></center></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+<!-- 		        Modal body -->
+			        <div class="modal-body" id="refMimicBody">
+		
+			        </div>
+<!-- 			        Modal footer -->
+			        <div class="modal-footer">
+<!-- 		             <button type="button" class="btn btn-danger" data-dismiss="modal" >Ok</button> -->
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+<footer>
+Copyrights &copy; COEPTECH - Virtual Labs
+</footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+   <script type="text/javascript" src="js/toastr.min.js"></script>
+
+ <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/stock-tools.js"></script>
+    
+   
+<script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!-- <script src="src/landingPage.js"></script> -->
+<script src="src/popupData.js"></script>
+<script src="src/stdJson.js"></script>
+<!--<script src="src/questionJson.js"></script>-->
+
+<!-- Plant 2- BoilerHeatExchanger -->
+
+<script src="src/BoilerHeatExchangerGraph.js"></script>
+<script src="src/BoilerHeatExchangerSquActivities.js"></script>
+<script src="src/subActivties1.js"></script>
+<script src="src/subActivties2.js"></script>
+<script src="src/subActivties3.js"></script>
+<script src="src/subActivties4.js"></script>
+<!-- <script src="src/faultActivity.js"></script> -->
+<script src="src/mainActivites.js"></script>
+<script src="src/result.js"></script>
+<script src="src/timer.js"></script>
+
+<script>
+
+</script>
+<script>
+toastr.options = {
+        'closeButton': true,
+        'debug': false,
+        'newestOnTop': false,
+        'progressBar': false,
+        'positionClass': 'toast-bottom-right',
+        'preventDuplicates': false,
+        'showDuration': '1000',
+        'hideDuration': '1000',
+        'timeOut': '5000',
+        'extendedTimeOut': '1000',
+        'showEasing': 'swing',
+        'hideEasing': 'linear',
+        'showMethod': 'fadeIn',
+        'hideMethod': 'fadeOut',
+        'margin-bottom':'50%'
+    }
+    
+</script>
+<script >
+$("#coepLogo").click(function(evt) {
+	
+	 $('#coepLogo').off('click');
+});
+$("#btnStart").click(function(evt) {
+	
+	subActivties1();
+});
+
+$('#report').on('click', function() {
+<!--			$('#report').prop("hidden",true);-->
+		    html2canvas(document.querySelector("#mainDiv")).then(canvas => {
+		        // Append the screenshot canvas to the body
+		        document.body.appendChild(canvas);
+		        $("canvas").css("display","none");
+		        // Optionally save the screenshot as an image
+		        var link = document.createElement('a');
+		        link.download = 'BoilerHeatExchanger_report.png';
+		        link.href = canvas.toDataURL();
+		        link.click();
+		    });
+		});
+
+</script>
+<script >
+    </script>
 </html>
