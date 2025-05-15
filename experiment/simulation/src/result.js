@@ -1,14 +1,31 @@
+function updateDateTime() {
+      const now = new Date();
+      const formatted = now.toLocaleString(); // e.g. "5/5/2025, 10:23:45 AM"
+      $('#dateTime').text(formatted);
+    }
+
+
 function result(){
-	timerMasterJson.alam=$("#counter").text();
+	timerMasterJson.subActivties4=$("#counter").text();
 	console.log(timerMasterJson);
 	seconds = 0;
 	  updateCounter();
 	$("#simDemo,#procedure,#counter,#tagDetails").prop("hidden",true);
 	$("#report").prop("hidden",false);
+	$("#Header").prop("hidden", true);
 //	$("#Header").html("<center><span >BOILER HEAT EXCHANGER PLANT(FAULT & ALAM)</span></center>");
 	
 	htm=''
+	+`<div class="row" id="divMis" style="background-color: #2e3539; padding: 10px; display: flex; justify-content: center;">
+  <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+    <span style="color: white;font-weight: bold;">Enter Name:</span>
+    <input type="text" id="nameInput" style="color: #000; padding: 5px; max-width: 200px;">
+    <label id="dateTime" style="color:#fff;"></label>
+  </div>
+
+</div>`
 	+'<div class="container-fluid">'
+	 +' <div class="row titlePart" id="" ><center><span >COMMISSIONING</span></center></div>' 
 	  
 	+' <!-- Title -->'
 
@@ -37,7 +54,7 @@ function result(){
 	+'       </td>'
 	+'     </tr>'
 	+'      <tr>'
-	+'        <td> <b>PRE-COMMISSIONING CHECK</b></td>'
+	+'        <td> <b>COMMISSIONING CHECK</b></td>'
 	+'        <td id="instr">'
 
 	+'		</td>'
@@ -101,7 +118,7 @@ function result(){
     +'   </div>'
     +'  <div class="col-md-3" >'
     +'    <div class="box">'
-    +'     <h5 class="section-title sectionStyle" >PRE-COMMISSIONING CHECK</h5>'
+    +'     <h5 class="section-title sectionStyle" >COMMISSIONING CHECK</h5>'
     +'     <div class="table-container">'
 	+'       <table style="border-style: solid;">'
 	+'          <tr class="trStyle">'
@@ -456,12 +473,56 @@ function result(){
 	        name: '',
 	        data: [
 	            { name: 'COLLECTIONS OF DOCUMENT(SYSTEM INTEGRATOR)', y: piping },
-	            { name: 'PRE-COMMISSIONING CHECK', y: instr },
+	            { name: 'COMMISSIONING CHECK', y: instr },
 	            { name: 'MANUAL MODE(FROM SCADA SCREEN)', y: squ },
 	            { name: 'AUTO MODE', y: squ1 }
 	          
 	        ]
 	    }]
 	});
-
+	
+	updateDateTime();
+	
+$("#report").click(function() {
+		tmp = $("#nameInput").val();
+		if(tmp != ""){
+			
+			  // Restore value from localStorage when page loads
+			  const savedName = localStorage.getItem("username");
+			  if (savedName) {
+			    $('#nameInput').val(savedName);
+			  }
+ 
+			  // Save input on change
+			  $('#nameInput').on('input', function() {
+			    localStorage.setItem("username", $(this).val());
+			  });
+			
+ 
+			console.log("click triggred");
+ 
+			const button = document.getElementById("report");
+			button.hidden = true;
+ 
+			html2canvas(document.querySelector("#mainDiv"), {
+				useCORS: true,
+				allowTaint: false,
+				backgroundColor: null
+			}).then(canvas => {
+				let link = document.createElement('a');
+				link.download = 'report.png';
+				link.href = canvas.toDataURL("image/png");
+				link.click();
+//				$("#btnNext").prop("hidden", false);
+			}).catch(err => {
+				console.error("Screenshot failed:", err);
+			}).finally(() => {
+				button.hidden = true;
+			});
+			$("#divMis").prop("hidden",true);
+			
+			}else{
+				alert("Enter Name");
+			}
+	});
 }

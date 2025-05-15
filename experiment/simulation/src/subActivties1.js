@@ -5,11 +5,7 @@ var timerMasterJson={};
 var resultJson={};
 function subActivties1()
 {
-    timerMasterJson.subActivties1=$("#counter").text();
-    console.log(timerMasterJson);
-    seconds = 0;
-    updateCounter();
-    $("#counter").prop("hidden",false);
+    
     $("#header2").html("<center><span> COMMISSIONING OF THE PLANT </span></center>");
 
     function shuffleArray(array) {
@@ -46,7 +42,7 @@ function subActivties1()
     shuffledData.forEach((item, index) => {
         htm+= '<tr>'
             +'<td>'+item.statement+'</td>'
-            +'<td> <input type="text" class="stepInput" value="no" data-correct="'+item.status+'"></td>'
+            +'<td> <input type="text" class="stepInput" value="" data-correct="'+item.status+'"></td>'
             +'</tr>';
     });
     

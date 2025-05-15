@@ -125,7 +125,7 @@ function mainActivites()
 		$("#refMimic").click(function () {
 			var htm=`
 			<center><video id="simVideo" width="90%" controls>
-	    <source src="images/boilerFaultalamVideo.mp4" type="video/mp4" >
+	    <source src="../resources/vlabs/elctricalLabs/PMEnggLab1/exp11/images/boilerFaultalamVideo.mp4" type="video/mp4" >
 	    Your browser does not support the video tag.
 	</video></center>
 			`;
