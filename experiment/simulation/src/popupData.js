@@ -15,7 +15,7 @@
 				+'selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
 				+'<br><b>Constraints and Assumptions :</b><br> As you are an Instrumentation and Control Engineer process related details are'
 				+'not expected from you. You will receive the same from a process expert.</b></div>'
-				+'<div class="row"><img src="images/boilerheatExchanger.jpg" class="img img-responsive"></img></div>'
+				+'<div class="row"><img src="../resources/vlabs/elctricalLabs/PMEnggLab1/exp11/images/boilerheatExchanger.jpg" class="img img-responsive"></img></div>'
 			$("#proStrBody").html(htm);
 			
 		});
