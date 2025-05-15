@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>Pre_Commissioning</title>
+<title>Commissioning</title>
 
 </head>
  <meta charset="utf-8">
@@ -52,7 +52,7 @@
 <!-- 		 <button type="button" id="tagDetails" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Tag Details </b></button> -->
 <!-- 	     <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#proStr"><b>Problem statement</b> </button> -->
 		    <button type="button" id="procedure" class="btn btn-danger btn1 button1" data-toggle="modal" data-target="#proStr" hidden><b>Procedure </b></button>
-		    <button type="button" class="btn btn-danger btn1 button1"  id="report" style="margin-top:10px;"  hidden>Download report </button> 
+		    <button type="button" class="btn btn-danger btn1 button1"  id="report" style="margin-top:10px;background-color:teal"  hidden>Download report </button> 
 	     </div>
 	     
 	   
@@ -80,9 +80,9 @@
 <!-- 			  End Modal ProStr -->
 	     
  	</div>
- 	<div class="row justify-content-center" style="margin-bottom:0px;">
-            <div class="col-md-10 instruction-box">
-            <h3 class="text-center" style="    color: cornflowerblue;font-weight: 900;font-family: emoji;" id="header2">COMMISSIONING</h3>
+ 	<div class="row justify-content-center" style="margin-bottom:0px;" id="titlePanel">
+        <div class="col-md-10 instruction-box">
+            <h3 class="text-center" style="color: cornflowerblue;font-weight: 900;font-family: emoji;" id="header2">COMMISSIONING</h3>
               
             </div>
         </div>
@@ -97,7 +97,7 @@
 <!--             <h4 class="text-center">FAULT FINDING</h4> -->
                 <span class="fw-bold" style="    font-family: emoji;
     font-size: 18px;
-    word-spacing: 1px;">You are appointed as “commissioning Engineer” by your firm and assigned you a job of 
+    word-spacing: 1px;">You are appointed as 'commissioning Engineer' by your firm and assigned you a job of 
     commissioning of a Boiler and Heat Exchanger Plant. List the documents you will collect 
     for the starting of commissioning activity.
              </span>
@@ -110,7 +110,7 @@
 <!--                     <h5 class="text-center">Pre_Commissioning</h5> -->
                    <ol STYLE="    FONT-WEIGHT: BOLD;">
     <li>Fully automatic plant with PLC control and SCADA interface</li>
-    <li>A steam of 30 Kg/Hr at 3.5 Kg/cm², and 135&deg;C</li>
+    <li>A steam of 30 Kg/Hr at 3.5 Kg/cm<sup>2</sup>, and 135&deg;C</li>
     <li>The steam will be used to produce hot water up to 80&deg;C, with 800 LPH flow</li>
     <li>The condensate will be used as feed water to improve efficiency</li>
     <li>Three level interlocks are used to protect the plant</li>
@@ -216,24 +216,27 @@ $("#coepLogo").click(function(evt) {
 	
 	 $('#coepLogo').off('click');
 });
+
+
+
 $("#btnStart").click(function(evt) {
 	
 	subActivties1();
 });
 
-$('#report').on('click', function() {
-<!--			$('#report').prop("hidden",true);-->
-		    html2canvas(document.querySelector("#mainDiv")).then(canvas => {
-		        // Append the screenshot canvas to the body
-		        document.body.appendChild(canvas);
-		        $("canvas").css("display","none");
-		        // Optionally save the screenshot as an image
-		        var link = document.createElement('a');
-		        link.download = 'BoilerHeatExchanger_report.png';
-		        link.href = canvas.toDataURL();
-		        link.click();
-		    });
-		});
+// $('#report').on('click', function() {
+// <!--			$('#report').prop("hidden",true);-->
+// 		    html2canvas(document.querySelector("#mainDiv")).then(canvas => {
+// 		        // Append the screenshot canvas to the body
+// 		        document.body.appendChild(canvas);
+// 		        $("canvas").css("display","none");
+// 		        // Optionally save the screenshot as an image
+// 		        var link = document.createElement('a');
+// 		        link.download = 'BoilerHeatExchanger_report.png';
+// 		        link.href = canvas.toDataURL();
+// 		        link.click();
+// 		    });
+// 		});
 
 </script>
 <script >

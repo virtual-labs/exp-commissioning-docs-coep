@@ -2,10 +2,10 @@ var subActivtiesCount4=0;
 
 function subActivties4()
 {
-        timerMasterJson.subActivties4=$("#counter").text();
-	console.log(timerMasterJson);
-	seconds = 0;
-	  updateCounter();
+	 timerMasterJson.subActivties3=$("#counter").text();
+		console.log(timerMasterJson);
+		seconds = 0;
+		  updateCounter();
 	//$("#footerModal").empty();
 	  
 //	$("#header2").html("<center><span>SUB ACTIVITES - 4</span></center>");
@@ -128,16 +128,16 @@ var htm=`
 		$("#Selection").html(htm);
 // Shuffle function
 		
-		$("#result").click(function(){
-			 resultJson.subActivtiesCount3=subActivtiesCount3;
-			
-			console.log(resultJson);
-			result();	
-			});
+//		$("#result").click(function(){
+//			 resultJson.subActivtiesCount3=subActivtiesCount3;
+//			
+//			console.log(resultJson);
+//			result();	
+//			});
 		$("#refMimic").click(function () {
 			var htm=`
 			<center><video id="simVideo" width="90%" controls>
-	    <source src="images/boilerFaultalamVideo.mp4" type="video/mp4" >
+	    <source src="../resources/vlabs/elctricalLabs/PMEnggLab1/exp11/images/boilerFaultalamVideo.mp4" type="video/mp4" >
 	    Your browser does not support the video tag.
 	</video></center>
 			`;

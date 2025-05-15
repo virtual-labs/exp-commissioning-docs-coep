@@ -2,10 +2,11 @@ var subActivtiesCount3=0;
 var alarmflg = 0;
 function subActivties3()
 {
-        timerMasterJson.subActivties3=$("#counter").text();
-	console.log(timerMasterJson);
-	seconds = 0;
-	  updateCounter();
+	  timerMasterJson.subActivties2=$("#counter").text();
+		console.log(timerMasterJson);
+		seconds = 0;
+		  updateCounter();
+       
 	//$("#footerModal").empty();
 	  
 //	$("#header2").html("<center><span>SUB ACTIVITES - 3</span></center>");
@@ -135,7 +136,7 @@ var htm=`
 		$("#refMimic").click(function () {
 			var htm=`
 			<center><video id="simVideo" width="90%" controls>
-	    <source src="images/boilerFaultalamVideo.mp4" type="video/mp4" >
+	    <source src="../resources/vlabs/elctricalLabs/PMEnggLab1/exp11/images/boilerFaultalamVideo.mp4" type="video/mp4" >
 	    Your browser does not support the video tag.
 	</video></center>
 			`;

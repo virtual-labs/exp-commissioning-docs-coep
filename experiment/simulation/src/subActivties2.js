@@ -2,10 +2,14 @@ var subActivtiesCount2=0;
 var alarmflg = 0;
 function subActivties2()
 {
-        timerMasterJson.subActivties2=$("#counter").text();
-	console.log(timerMasterJson);
-	seconds = 0;
-	  updateCounter();
+	
+	timerMasterJson.subActivties1=$("#counter").text();
+    console.log(timerMasterJson);
+    seconds = 0;
+    updateCounter();
+    $("#counter").prop("hidden",false);
+	
+      
 	
 	 function shuffleArray(array) {
             return array.sort(() => Math.random() - 0.5);
@@ -38,7 +42,7 @@ function subActivties2()
 	 +' <div class="row justify-content-center" style="margin-bottom:0px;">'
 	 +' <div class="col-md-10 instruction-box">'
 	 +' <h5 class="text-center" style="color: #297076;font-weight: 900;font-family: emoji;" id="">'
-	 +' Which is the best sequence to start the per-commissioning activities?'
+	 +' Which is the best sequence to start the commissioning activities?'
 
 	 +'</h5>'
        
@@ -131,7 +135,7 @@ function subActivties2()
 		$("#refMimic").click(function () {
 			var htm=`
 			<center><video id="simVideo" width="90%" controls>
-	    <source src="images/boilerFaultalamVideo.mp4" type="video/mp4" >
+	    <source src="../resources/vlabs/elctricalLabs/PMEnggLab1/exp11/images/boilerFaultalamVideo.mp4" type="video/mp4" >
 	    Your browser does not support the video tag.
 	</video></center>
 			`;
@@ -308,7 +312,7 @@ $(document).ready(function () {
 		 <div class="row justify-content-center" style="margin-bottom:0px;">
 	  <div class="col-md-10 instruction-box">
 	  <h5 class="text-center" style="color: #297076;font-weight: 900;font-family: emoji;" id="">
-	  Which is the best sequence to start the per-commissioning activities?
+	  Which is the best sequence to start the commissioning activities?
 	   </h5>
       
 	  </div>
