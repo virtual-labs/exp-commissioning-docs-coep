@@ -34,7 +34,7 @@ function subActivties1()
     +'<thead>'
     +'<tr>'
     +'<th>ACTIVITIES </th>'
-    +'<th>STATUS</th>'
+    +'<th>STATUS (Yes/No)</th>'
     +'</tr>'
     +'</thead>'
     +'<tbody id="output">';
