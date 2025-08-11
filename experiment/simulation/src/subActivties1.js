@@ -185,7 +185,7 @@ function subActivties1()
   
                 </div>
                 </div>
-                <table class="table ">
+                <table class="table " style="margin-bottom:50px;">
                     <thead>
                         <tr class="table-info">
                         <th>Statement</th>
