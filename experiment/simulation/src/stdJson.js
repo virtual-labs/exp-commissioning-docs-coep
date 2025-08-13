@@ -32,7 +32,7 @@ var plantDocuments = {
 	    			  ]
 	    			}
 
-      console.log(subJsonData1);
+      //console.log(subJsonData1);
       
       var subJsonData2 = {
     		  "statements": [
@@ -56,7 +56,7 @@ var plantDocuments = {
     			  ]
     			}
 
-    console.log(subJsonData2);
+    //console.log(subJsonData2);
     var subJsonData3 = {
     		  "statements": [
     			    { "step_no": "1", "statement": "Turn the plant in AUTO mode and give START command" },
@@ -79,5 +79,5 @@ var plantDocuments = {
     			  ]
     			}
 
-    console.log(subJsonData3);
+    //console.log(subJsonData3);
  

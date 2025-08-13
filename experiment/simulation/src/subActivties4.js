@@ -319,7 +319,7 @@ $(document).ready(function () {
        
 	  </div>
 	 </div>
-		 <table class="table table-striped">
+		 <table class="table table-striped" style="margin-bottom:50px;">
 			    <thead>
 			      <tr class="table-info">
 			        <th>Sequence Number</th>
