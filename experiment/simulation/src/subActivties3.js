@@ -311,7 +311,7 @@ $(document).ready(function () {
 	   What is the sequence of operation to be configured before starting the plant? (Manual Mode(From SCADA Screen))</h5>
        </div>
 	  </div>
-		 <table class="table table-striped">
+		 <table class="table table-striped" style="margin-bottom: 50px;">
 			    <thead>
 			     <tr class="table-info">
 			        <th>Sequence Number</th>
